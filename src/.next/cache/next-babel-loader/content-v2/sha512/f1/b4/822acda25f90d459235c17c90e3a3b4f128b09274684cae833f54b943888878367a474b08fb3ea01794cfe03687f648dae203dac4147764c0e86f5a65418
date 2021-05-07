@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from '../containers/Home';","map":{"version":3,"sources":["Y:/coding/codebase/next-codebase-starter/src/pages/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,oBAAxB","sourcesContent":["export { default } from '../containers/Home';\n"]},"metadata":{},"sourceType":"module"}
