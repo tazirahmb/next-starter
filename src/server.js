@@ -1,4 +1,4 @@
-/* eslint-disable promise/catch-or-return */
+// /* eslint-disable promise/catch-or-return */
 const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');

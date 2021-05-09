@@ -5,10 +5,22 @@
   "scripts": {
     "serve": "node ./src/server.js",
     "build": "next build ./src",
-    "start": "next start ./src"
+    "build:development": "npm run build -- --development",
+    "build:staging": "npm run build -- --staging",
+    "build:production": "npm run build -- --production",
+    "start": "next start ./src",
+    "prepare": "husky install",
+    "lint": "esw src/ --color",
+    "lint:watch": "npm run lint -- --watch",
+    "lint:commit": "npm run lint -- --quiet",
+    "lint-staged": "lint-staged",
+    "test": "jest --updateSnapshot --runInBand",
+    "test:commit": "jest --updateSnapshot --runInBand --silent --passWithNoTests ./src",
+    "test:cover": "npm run test -- --coverage "
   },
   "dependencies": {
     "next": "10.0.8",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
@@ -31,6 +43,18 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sonarjs": "^0.7.0",
     "eslint-watch": "^7.0.0",
-    "jest": "^26.6.3"
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.2.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "prettier --write",
+      "npm run lint:commit"
+    ],
+    "*": [
+      "npm run test:commit"
+    ]
   }
 }
