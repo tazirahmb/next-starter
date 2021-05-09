@@ -1,7 +1,7 @@
 // const withPlugins = require('next-compose-plugins');
 const path = require('path');
 
-const buildMode = (process.argv[2] || '').split('--')[1] || 'staging';
+const buildMode = (process.argv[2] || '').split('--')[1] || 'development';
 
 const nextConfig = {
   env: {

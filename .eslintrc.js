@@ -28,4 +28,16 @@ module.exports = {
   // rules: {},
   // overrides: {},
   // global: {},
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    'import/resolver': {
+      'eslint-import-resolver-custom-alias': {
+        alias: {
+          '~': './src',
+        },
+      },
+    },
+  },
 };
