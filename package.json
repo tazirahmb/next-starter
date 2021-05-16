@@ -1,6 +1,6 @@
 {
   "name": "next-codebase-starter",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "node ./src/server.js",
