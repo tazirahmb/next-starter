@@ -1,10 +1,10 @@
 import { HYDRATE } from 'next-redux-wrapper';
 
-const initData = Map({
+const initData = {
   isOpen: false,
   variant: '',
   message: '',
-});
+};
 
 export function snackbar(state = initData, action) {
   switch (action.type) {

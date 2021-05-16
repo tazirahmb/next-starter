@@ -1,9 +1,12 @@
+const alias = require('./tools/alias').alias;
+
 module.exports = {
   root: true,
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:jest/recommended',
+    'plugin:sonarjs/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
@@ -13,10 +16,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-      experimentalObjectRestSpread: true,
-    },
+    ecmaFeature: { jsx: true },
   },
   env: {
     es6: true,
@@ -34,9 +34,7 @@ module.exports = {
     },
     'import/resolver': {
       'eslint-import-resolver-custom-alias': {
-        alias: {
-          '~': './src',
-        },
+        alias,
       },
     },
   },
